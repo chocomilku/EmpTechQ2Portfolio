@@ -1,16 +1,20 @@
 import Head from "next/head";
-import Link from "next/link";
-import { directory, iProps, postItemProp } from "../../utils/exports";
+import { directory, inProps, iProps, propRec } from "../../utils/exports";
 import fs from "fs";
 import matter from "gray-matter";
+import { PostCard } from "../../components/PostCard";
 
-const actHome = (props: postItemProp) => {
+const actHome = (props: inProps) => {
 	return (
 		<>
+			{console.log("index", props)}
 			<Head>
 				<title>Activities | Website Name</title>
 			</Head>
 			<h1>Activities</h1>
+			{props.metadata.map((item, i) => {
+				return <PostCard metadata={item} key={i} />;
+			})}
 		</>
 	);
 };

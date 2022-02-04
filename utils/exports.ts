@@ -11,18 +11,24 @@ export const directory = (): string[] => {
 };
 
 export interface postItemProp {
-	metadata: {
-		slug: string;
-		title: string;
-		description: string;
-		img: string;
-		date: string;
-		headers: string[];
-	};
+	slug: string;
+	title: string;
+	description: string;
+	img: string;
+	date: string;
+	headers: string[];
 }
 
 export interface iProps {
 	props: {
 		[metadata: string]: any;
 	};
+}
+
+export interface propRec {
+	metadata: postItemProp;
+}
+
+export interface inProps {
+	metadata: postItemProp[];
 }
