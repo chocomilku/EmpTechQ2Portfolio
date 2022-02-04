@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { directory, inProps, iProps, propRec } from "../../utils/exports";
+import { directory, inProps, iProps } from "../../utils/exports";
 import fs from "fs";
 import matter from "gray-matter";
 import { PostCard } from "../../components/PostCard";
@@ -7,7 +7,6 @@ import { PostCard } from "../../components/PostCard";
 const actHome = (props: inProps) => {
 	return (
 		<>
-			{console.log("index", props)}
 			<Head>
 				<title>Activities | Website Name</title>
 			</Head>

@@ -4,7 +4,6 @@ import Link from "next/link";
 export const PostCard = ({ metadata }: propRec) => {
 	return (
 		<div>
-			{console.log("card", metadata)}
 			<Link href={`/activities/${metadata.slug}`}>
 				<a>
 					<h1>{metadata.title}</h1>
@@ -12,8 +11,8 @@ export const PostCard = ({ metadata }: propRec) => {
 			</Link>
 			<p>{metadata.description}</p>
 			<ul>
-				{metadata.headers.map((item) => {
-					return <li>{item}</li>;
+				{metadata.headers.map((item, i) => {
+					return <li key={i}>{item}</li>;
 				})}
 			</ul>
 		</div>
