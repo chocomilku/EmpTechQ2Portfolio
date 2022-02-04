@@ -1,4 +1,6 @@
+import { GetStaticPaths } from "next";
 import Head from "next/head";
+import { directory } from "../../utils/exports";
 
 const page = () => {
 	return (
@@ -12,3 +14,15 @@ const page = () => {
 };
 
 export default page;
+
+export const getStaticPaths: GetStaticPaths = async () => {
+	const paths = directory().map((file) => ({
+		params: {
+			page: file.replace(".mdx", ""),
+		},
+	}));
+	return {
+		paths,
+		fallback: false,
+	};
+};
