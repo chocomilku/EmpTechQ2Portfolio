@@ -1,7 +1,7 @@
 import fs from "fs";
 
 /**
- * Scans and enumerates .md files through a certain directory
+ * Scans and enumerates .mdx files through a certain directory
  * @returns string array including the names of files with .md extension
  */
 export const directory = (): string[] => {
@@ -14,7 +14,7 @@ export interface postItemProp {
 	slug: string;
 	title: string;
 	description: string;
-	img: string;
+	img?: string;
 	date: string;
 	headers: string[];
 }
@@ -45,4 +45,13 @@ export interface pageData {
 	mdx: {
 		compiledSource: string;
 	};
+}
+
+export interface custom {
+	id: string;
+}
+
+export interface headerList {
+	item: string;
+	page: string;
 }

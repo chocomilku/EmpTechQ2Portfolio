@@ -1,11 +1,29 @@
 import { GetStaticPaths } from "next";
 import Head from "next/head";
-import { directory, pageData, pageSlug } from "../../utils/exports";
+import Link from "next/link";
+import { directory, pageData, pageSlug, custom } from "../../utils/exports";
 import fs from "fs";
 import matter from "gray-matter";
 import { serialize } from "next-mdx-remote/serialize";
 import { MDXRemote } from "next-mdx-remote";
 import rehypeSlug from "rehype-slug";
+
+const h2Link = ({ id, ...rest }: custom) => {
+	if (id) {
+		return (
+			<Link href={`#${id}`}>
+				<a id={id}>
+					<h2 {...rest} />
+				</a>
+			</Link>
+		);
+	}
+	return <h2 {...rest} />;
+};
+
+const components = {
+	h2: h2Link,
+};
 
 const page = (props: pageData) => {
 	return (
@@ -14,7 +32,10 @@ const page = (props: pageData) => {
 				<title>{props.meta.title} | Website Name</title>
 			</Head>
 			<h1>{props.meta.title}</h1>
-			<MDXRemote compiledSource={props.mdx.compiledSource} />
+			<MDXRemote
+				compiledSource={props.mdx.compiledSource}
+				components={components}
+			/>
 		</>
 	);
 };
@@ -27,18 +48,14 @@ export const getStaticProps = async ({ params: { page } }: pageSlug) => {
 			return file;
 		}
 	});
-
 	const file = fs.readFileSync(`${process.cwd()}/posts/${slug[0]}`, "utf-8");
-
 	const { data: meta, content } = matter(file);
-
 	const mdx = await serialize(content, {
 		mdxOptions: {
 			//@ts-ignore
 			rehypePlugins: [rehypeSlug],
 		},
 	});
-
 	return {
 		props: {
 			meta,
