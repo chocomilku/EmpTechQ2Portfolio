@@ -1,19 +1,20 @@
 import { GetStaticPaths } from "next";
 import Head from "next/head";
-import { directory, pageSlug } from "../../utils/exports";
+import { directory, pageData, pageSlug } from "../../utils/exports";
 import fs from "fs";
 import matter from "gray-matter";
 import { serialize } from "next-mdx-remote/serialize";
 import { MDXRemote } from "next-mdx-remote";
 import rehypeSlug from "rehype-slug";
 
-const page = () => {
+const page = (props: pageData) => {
 	return (
 		<>
 			<Head>
-				<title>Page | Website Name</title>
+				<title>{props.meta.title} | Website Name</title>
 			</Head>
-			<h1>Page</h1>
+			<h1>{props.meta.title}</h1>
+			<MDXRemote compiledSource={props.mdx.compiledSource} />
 		</>
 	);
 };

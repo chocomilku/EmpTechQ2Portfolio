@@ -38,3 +38,11 @@ export interface pageSlug {
 		page: string;
 	};
 }
+
+export interface pageData {
+	meta: postItemProp;
+	page: string;
+	mdx: {
+		compiledSource: string;
+	};
+}
