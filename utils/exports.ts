@@ -32,3 +32,9 @@ export interface propRec {
 export interface inProps {
 	metadata: postItemProp[];
 }
+
+export interface pageSlug {
+	params: {
+		page: string;
+	};
+}
