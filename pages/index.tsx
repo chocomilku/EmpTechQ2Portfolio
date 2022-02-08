@@ -8,7 +8,7 @@ const Home: NextPage = () => {
 			<Head>
 				<title>Website Name</title>
 			</Head>
-			<h1>Home Page</h1>
+			<h1 className="text-3xl font-bold">Home Page</h1>
 			<Link href="/activities">
 				<a>View All Activities</a>
 			</Link>
