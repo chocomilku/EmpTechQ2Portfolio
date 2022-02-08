@@ -15,8 +15,10 @@ export interface postItemProp {
 	title: string;
 	description: string;
 	img?: string;
-	date: string;
+	date?: string;
 	headers: string[];
+	startDate?: string;
+	endDate?: string;
 }
 
 export interface iProps {
@@ -54,4 +56,9 @@ export interface custom {
 export interface headerList {
 	item: string;
 	page: string;
+}
+
+export interface DateComponentProps {
+	startDate: string | undefined;
+	endDate: string | undefined;
 }
