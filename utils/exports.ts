@@ -66,4 +66,5 @@ export interface DateComponentProps {
 export interface liTechProps {
 	tech: string;
 	description: string;
+	url: string;
 }

@@ -13,10 +13,3 @@
 		@apply font-medium;
 	}
 }
-
-.content {
-	@apply p-4 w-full flex flex-col container;
-	h1 {
-		@apply text-3xl text-accent text-center p-2;
-	}
-}

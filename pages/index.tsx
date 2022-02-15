@@ -15,26 +15,31 @@ const Home: NextPage = () => {
 				<h1>Home Page</h1>
 				<h2>Portfolio</h2>
 			</div>
-			<h1 className="text-center text-accent text-3xl font-medium p-4">
-				An Over-engineered portfolio using Next.js with Typescript 🤯
-			</h1>
-			<div className={styles.content}>
-				<h1>Technologies Used</h1>
-				<ul>
-					{data.data.map((item, i) => {
-						return (
-							<LiTech
-								tech={item.title}
-								description={item.Description}
-								key={i}
-							/>
-						);
-					})}
-				</ul>
+			<div className="p-6">
+				<h1 className="text-center text-accent text-4xl font-medium p-4">
+					An Over-engineered portfolio using Next.js with Typescript 🤯
+				</h1>
+				<h1 className="text-3xl text-accent text-center p-2;">
+					Main Technologies Used
+				</h1>
+				<div className="flex">
+					<div className="p-4 w-full flex flex-row container gap-2 justify-center content-center flex-wrap">
+						{data.data.map((item, i) => {
+							return (
+								<LiTech
+									tech={item.title}
+									description={item.Description}
+									url={item.URL}
+									key={i}
+								/>
+							);
+						})}
+					</div>
+				</div>
+				<Link href="/activities">
+					<a>View All Activities</a>
+				</Link>
 			</div>
-			<Link href="/activities">
-				<a>View All Activities</a>
-			</Link>
 		</>
 	);
 };

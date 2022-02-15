@@ -2,13 +2,23 @@
 	"data": [
 		{
 			"title": "Next.js",
-			"Description": "A React Framework created by Vercel with extensive features",
-			"URL": "https://localhost:3000"
+			"Description": "A React Framework with extensive features created by Vercel.",
+			"URL": "https://nextjs.org/"
 		},
 		{
 			"title": "Typescript",
 			"Description": "A Superset of Javascript that adds features like type system that can be compiled to any versions of Javascript. Created By Microsoft",
-			"URL": "https://google.com"
+			"URL": "https://www.typescriptlang.org/"
+		},
+		{
+			"title": "MDX",
+			"Description": "Markdown with JSX. Markdown allows the user to write content without worrying the confusing syntax of HTML. JSX allows user to write custom reusable components to avoid repetitive code. This webpage uses Next.js that uses React that uses JSX",
+			"URL": "https://mdxjs.com/"
+		},
+		{
+			"title": "Tailwind CSS",
+			"Description": "A CSS Framework that has built-in classes that will be helpful for web developers to quickly build User Interfaces",
+			"URL": "https://tailwindcss.com/"
 		}
 	]
 }
