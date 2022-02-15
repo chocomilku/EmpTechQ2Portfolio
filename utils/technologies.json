@@ -1,0 +1,14 @@
+{
+	"data": [
+		{
+			"title": "Next.js",
+			"Description": "A React Framework created by Vercel with extensive features",
+			"URL": "https://localhost:3000"
+		},
+		{
+			"title": "Typescript",
+			"Description": "A Superset of Javascript that adds features like type system that can be compiled to any versions of Javascript. Created By Microsoft",
+			"URL": "https://google.com"
+		}
+	]
+}

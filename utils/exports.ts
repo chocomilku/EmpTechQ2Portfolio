@@ -62,3 +62,8 @@ export interface DateComponentProps {
 	startDate: string | undefined;
 	endDate: string | undefined;
 }
+
+export interface liTechProps {
+	tech: string;
+	description: string;
+}

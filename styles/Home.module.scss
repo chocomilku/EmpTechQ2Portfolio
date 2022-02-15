@@ -6,10 +6,17 @@
 	@apply w-full min-h-screen p-8 flex content-center justify-center flex-col;
 	h1,
 	h2 {
-		@apply text-6xl text-white text-center;
+		@apply text-6xl text-center text-white;
 	}
 	h1 {
 		font-size: 5rem;
 		@apply font-medium;
+	}
+}
+
+.content {
+	@apply p-4 w-full flex flex-col container;
+	h1 {
+		@apply text-3xl text-accent text-center p-2;
 	}
 }
