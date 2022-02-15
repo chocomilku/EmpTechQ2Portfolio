@@ -7,9 +7,7 @@ export const LiTech = ({ tech, description, url }: liTechProps) => {
 		<article className={styles.item}>
 			<h1>
 				<Link href={url}>
-				<a className="underline">
-					{tech}
-				</a>
+					<a className="underline">{tech}</a>
 				</Link>
 			</h1>
 			<p>{description}</p>

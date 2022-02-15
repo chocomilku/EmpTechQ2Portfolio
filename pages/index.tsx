@@ -24,7 +24,7 @@ const Home: NextPage = () => {
 					Main Technologies Used
 				</h1>
 				<div className="flex">
-					<div className="p-4 w-full flex flex-row container gap-2 justify-center content-center flex-wrap">
+					<div className="p-4 w-full flex flex-row container gap-4 justify-center content-center flex-wrap">
 						{data.data.map((item, i) => {
 							return (
 								<LiTech
