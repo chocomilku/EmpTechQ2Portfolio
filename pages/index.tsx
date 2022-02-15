@@ -4,6 +4,7 @@ import Link from "next/link";
 import styles from "../styles/Home.module.scss";
 import { LiTech } from "../components/liTech";
 import data from "../utils/technologies.json";
+import { Btn } from "../components/Btn";
 
 const Home: NextPage = () => {
 	return (
@@ -36,9 +37,9 @@ const Home: NextPage = () => {
 						})}
 					</div>
 				</div>
-				<Link href="/activities">
-					<a>View All Activities</a>
-				</Link>
+				<div className="grid place-items-center p-2">
+					<Btn text="View All Activities" link="/activities" />
+				</div>
 			</div>
 		</>
 	);

@@ -68,3 +68,8 @@ export interface liTechProps {
 	description: string;
 	url: string;
 }
+
+export interface buttonProps {
+	text: string;
+	link: string;
+}
