@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+	background-image: url("../public/Visiwig-Dots.svg");
+	// visiwig.com/patterns
+	// scale: 0.8 stroke: 19.31
+	background-repeat: repeat;
+	background-position: center;
+	background-size: cover;
+	background-color: #e6e6e6;
+	font-family: "Poppins", sans-serif;
+	@apply min-h-screen;
+}

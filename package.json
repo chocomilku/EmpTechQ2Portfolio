@@ -14,7 +14,8 @@
 		"next-mdx-remote": "^3.0.8",
 		"react": "^17.0.2",
 		"react-dom": "^17.0.2",
-		"rehype-slug": "^5.0.1"
+		"rehype-slug": "^5.0.1",
+		"sass": "^1.49.7"
 	},
 	"devDependencies": {
 		"@tailwindcss/typography": "^0.5.1",
