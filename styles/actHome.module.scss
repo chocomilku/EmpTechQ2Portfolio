@@ -1,0 +1,10 @@
+.hero {
+	@apply w-full h-auto grid place-items-center p-4;
+	> h1 {
+		background-image: url("../public/stacked-waves-haikei.svg");
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		@apply w-fit p-6 h-fit text-white text-6xl;
+	}
+}

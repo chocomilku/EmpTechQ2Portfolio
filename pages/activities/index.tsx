@@ -3,6 +3,7 @@ import { directory, inProps, iProps } from "../../utils/exports";
 import fs from "fs";
 import matter from "gray-matter";
 import { PostCard } from "../../components/PostCard";
+import styles from "../../styles/actHome.module.scss";
 
 const actHome = (props: inProps) => {
 	return (
@@ -10,10 +11,17 @@ const actHome = (props: inProps) => {
 			<Head>
 				<title>Activities | Website Name</title>
 			</Head>
-			<h1>Activities</h1>
-			{props.metadata.map((item, i) => {
-				return <PostCard metadata={item} key={i} />;
-			})}
+			<div className={styles.hero}>
+				<h1>Activities</h1>
+			</div>
+
+			<div className="flex content-center justify-center">
+				<div className="cardContainer">
+					{props.metadata.map((item, i) => {
+						return <PostCard metadata={item} key={i} />;
+					})}
+				</div>
+			</div>
 		</>
 	);
 };

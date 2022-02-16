@@ -1,0 +1,6 @@
+.list {
+	@apply list-disc px-4 py-1 list-inside text-sm;
+	a {
+		@apply underline underline-offset-auto;
+	}
+}

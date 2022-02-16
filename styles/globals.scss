@@ -11,5 +11,9 @@ html {
 	background-size: cover;
 	background-color: white;
 	font-family: "Poppins", sans-serif;
-	@apply min-h-screen;
+	@apply min-h-screen min-w-full;
+}
+
+.cardContainer {
+	@apply p-4 w-full flex flex-row container gap-4 justify-center content-center flex-wrap;
 }

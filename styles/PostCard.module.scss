@@ -1,0 +1,13 @@
+.date {
+	@apply text-accent text-xs;
+}
+
+.item {
+	@apply max-w-xs w-2/6 min-h-[260px] rounded-xl bg-slate-100 shadow-accent shadow p-4 transition-transform hover:scale-105 cursor-pointer;
+	h1 {
+		@apply text-2xl font-medium text-accent underline;
+	}
+	p {
+		@apply text-lg;
+	}
+}
