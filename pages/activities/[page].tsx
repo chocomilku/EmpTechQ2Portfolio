@@ -34,12 +34,22 @@ const page = (props: pageData) => {
 				<title>{props.meta.title} | Website Name</title>
 			</Head>
 			<div className={styles.hero}>
-				<h1>{props.meta.title}</h1>
+				<div>
+					<h1>{props.meta.title}</h1>
+					<h2>Subtitle here</h2>
+				</div>
 			</div>
-			<MDXRemote
-				compiledSource={props.mdx.compiledSource}
-				components={components}
-			/>
+			<div className="w-full grid place-items-center">
+				<article className="prose bg-slate-50 rounded w-fit p-4 container">
+					<MDXRemote
+						compiledSource={props.mdx.compiledSource}
+						components={components}
+					/>
+				</article>
+			</div>
+			<div className="grid place-items-center p-2">
+				<Btn text="Go Back to Home" link="/" />
+			</div>
 		</>
 	);
 };
