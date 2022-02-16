@@ -4,6 +4,7 @@ import fs from "fs";
 import matter from "gray-matter";
 import { PostCard } from "../../components/PostCard";
 import styles from "../../styles/actHome.module.scss";
+import { Btn } from "../../components/Btn";
 
 const actHome = (props: inProps) => {
 	return (
@@ -21,6 +22,9 @@ const actHome = (props: inProps) => {
 						return <PostCard metadata={item} key={i} />;
 					})}
 				</div>
+			</div>
+			<div className="grid place-items-center p-2">
+				<Btn text="Go Back to Home" link="/" />
 			</div>
 		</>
 	);

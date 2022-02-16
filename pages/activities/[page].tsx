@@ -7,6 +7,8 @@ import matter from "gray-matter";
 import { serialize } from "next-mdx-remote/serialize";
 import { MDXRemote } from "next-mdx-remote";
 import rehypeSlug from "rehype-slug";
+import { Btn } from "../../components/Btn";
+import styles from "../../styles/page.module.scss";
 
 const h2Link = ({ id, ...rest }: custom) => {
 	if (id) {
@@ -31,7 +33,9 @@ const page = (props: pageData) => {
 			<Head>
 				<title>{props.meta.title} | Website Name</title>
 			</Head>
-			<h1>{props.meta.title}</h1>
+			<div className={styles.hero}>
+				<h1>{props.meta.title}</h1>
+			</div>
 			<MDXRemote
 				compiledSource={props.mdx.compiledSource}
 				components={components}
