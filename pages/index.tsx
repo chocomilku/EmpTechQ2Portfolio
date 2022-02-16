@@ -1,8 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Link from "next/link";
 import styles from "../styles/Home.module.scss";
-import { LiTech } from "../components/liTech";
+import { LiTech } from "../components/LiTech";
 import data from "../utils/technologies.json";
 import { Btn } from "../components/Btn";
 

@@ -5,7 +5,7 @@ import styles from "../styles/Btn.module.scss";
 export const Btn = ({ text, link }: buttonProps) => {
 	return (
 		<>
-			<Link href={link}>
+			<Link href={link} passHref>
 				<button className={styles.button}>
 					<a>{text}</a>
 				</button>
