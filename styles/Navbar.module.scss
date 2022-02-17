@@ -1,0 +1,17 @@
+.li {
+	@apply flex;
+	a {
+		@apply cursor-pointer rounded bg-purple-700 hover:bg-purple-600 transition-all w-full p-4;
+	}
+}
+
+.nav {
+	@apply p-2 flex flex-col sticky top-0;
+	h1 {
+		@apply text-center text-3xl py-14 px-2;
+	}
+}
+
+.ul {
+	@apply flex flex-col gap-2;
+}

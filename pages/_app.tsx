@@ -7,8 +7,9 @@ function MyApp({ Component, pageProps }: AppProps) {
 	return (
 		<>
 			<ThemeProvider attribute="class">
-				<Navbar />
-				<Component {...pageProps} />
+				<Navbar>
+					<Component {...pageProps} />
+				</Navbar>
 			</ThemeProvider>
 		</>
 	);
