@@ -9,6 +9,9 @@ import { MDXRemote } from "next-mdx-remote";
 import rehypeSlug from "rehype-slug";
 import { Btn } from "../../components/Btn";
 import styles from "../../styles/page.module.scss";
+import remarkGFM from "remark-gfm";
+import imageSize from "rehype-img-size";
+import Image from "next/image";
 
 const h2Link = ({ id, ...rest }: custom) => {
 	if (id) {
@@ -23,8 +26,18 @@ const h2Link = ({ id, ...rest }: custom) => {
 	return <h2 {...rest} />;
 };
 
+const emAns = ({ ...rest }: any) => {
+	return <span className="text-accent no-underline not-italic" {...rest} />;
+};
+
+const nextImg = (props: any) => {
+	return <Image {...props} layout="responsive" loading="lazy" />;
+};
+
 const components = {
 	h2: h2Link,
+	em: emAns,
+	img: nextImg,
 };
 
 const page = (props: pageData) => {
@@ -67,7 +80,9 @@ export const getStaticProps = async ({ params: { page } }: pageSlug) => {
 	const mdx = await serialize(content, {
 		mdxOptions: {
 			//@ts-ignore
-			rehypePlugins: [rehypeSlug],
+			rehypePlugins: [rehypeSlug, [imageSize, { dir: "public" }]],
+			//@ts-ignore
+			remarkPlugins: [remarkGFM],
 		},
 	});
 	return {

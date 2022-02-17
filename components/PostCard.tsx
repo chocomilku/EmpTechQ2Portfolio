@@ -11,7 +11,7 @@ export const PostCard = ({ metadata }: propRec) => {
 		else return true;
 	};
 	return (
-		<Link href={`/activities/${metadata.slug}`}>
+		<Link href={`/activities/${metadata.slug}`} passHref>
 			<div className={styles.item}>
 				<h1>{metadata.title}</h1>
 				<h6 className={styles.date}>
