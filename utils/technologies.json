@@ -11,14 +11,29 @@
 			"URL": "https://www.typescriptlang.org/"
 		},
 		{
-			"title": "MDX",
-			"Description": "Markdown with JSX. Markdown allows the user to write content without worrying the confusing syntax of HTML. JSX allows user to write custom reusable components to avoid repetitive code. This webpage uses Next.js that uses React that uses JSX",
-			"URL": "https://mdxjs.com/"
-		},
-		{
 			"title": "Tailwind CSS",
 			"Description": "A CSS Framework that has built-in classes that is helpful for web developers to quickly build User Interfaces",
 			"URL": "https://tailwindcss.com/"
+		},
+		{
+			"title": "MDX",
+			"Description": "Markdown with JSX. Markdown allows the user to write content without worrying the confusing syntax of HTML.",
+			"URL": "https://mdxjs.com/"
+		},
+		{
+			"title": "Sass/SCSS",
+			"Description": "Sass or \"Syntactically Awesome Style Sheets\" brings CSS with Superpowers such as nesting",
+			"URL": "https://sass-lang.com/"
+		},
+		{
+			"title": "Github",
+			"Description": "An offsite location to store git repositories. ",
+			"URL": "https://github.com"
+		},
+		{
+			"title": "Vercel",
+			"Description": "Hosting Service for production builds of front-end applications especially the one's built with Next.js",
+			"URL": "https://vercel.com/"
 		}
 	]
 }

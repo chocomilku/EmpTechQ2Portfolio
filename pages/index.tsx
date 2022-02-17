@@ -4,6 +4,7 @@ import styles from "../styles/Home.module.scss";
 import { LiTech } from "../components/LiTech";
 import data from "../utils/technologies.json";
 import { Btn } from "../components/Btn";
+import Link from "next/link";
 
 const Home: NextPage = () => {
 	return (
@@ -36,6 +37,12 @@ const Home: NextPage = () => {
 						})}
 					</div>
 				</div>
+				<h1 className="text-2xl text-accent text-center p-2 font-medium">
+					Built by{" "}
+					<Link href="/">
+						<a className="underline">chocomilku-</a>
+					</Link>
+				</h1>
 				<div className="grid place-items-center p-2">
 					<Btn text="View All Activities" link="/activities" />
 				</div>
