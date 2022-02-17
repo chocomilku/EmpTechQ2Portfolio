@@ -49,7 +49,7 @@ const page = (props: pageData) => {
 			<div className={styles.hero}>
 				<div>
 					<h1>{props.meta.title}</h1>
-					<h2>Subtitle here</h2>
+					<h2>{props.meta.description}</h2>
 				</div>
 			</div>
 			<div className="w-full grid place-items-center">
