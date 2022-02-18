@@ -53,7 +53,7 @@ const page = (props: pageData) => {
 				</div>
 			</div>
 			<div className="w-full grid place-items-center">
-				<article className="prose bg-slate-50 rounded w-fit p-4 container">
+				<article className="prose bg-slate-50 rounded w-fit p-4 container m-4">
 					<MDXRemote
 						compiledSource={props.mdx.compiledSource}
 						components={components}
