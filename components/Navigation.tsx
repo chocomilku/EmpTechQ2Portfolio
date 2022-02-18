@@ -2,7 +2,6 @@ import { NavigationType } from "../utils/exports";
 import Link from "next/link";
 
 export const Navigation = ({ type, link }: NavigationType) => {
-	console.log(type, link);
 	const capital = (text: string): string => {
 		return text.charAt(0).toUpperCase() + text.slice(1);
 	};

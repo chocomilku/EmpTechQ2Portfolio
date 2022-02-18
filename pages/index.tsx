@@ -5,16 +5,52 @@ import { LiTech } from "../components/LiTech";
 import data from "../utils/technologies.json";
 import { Btn } from "../components/Btn";
 import Link from "next/link";
+import { motion, Variants } from "framer-motion";
+
+const titleAnim = (delay: number, startX: number, startY: number): Variants => {
+	return {
+		hidden: {
+			translateX: startX,
+			translateY: startY,
+			opacity: 0,
+		},
+		visible: {
+			translateX: 0,
+			translateY: 0,
+			opacity: 1,
+			transition: {
+				delay,
+			},
+		},
+	};
+};
 
 const Home: NextPage = () => {
+	const delay: number = 0.5;
 	return (
 		<>
 			<Head>
 				<title>Website Name</title>
 			</Head>
 			<div className={styles.hero}>
-				<h1>Home Page</h1>
-				<h2>Portfolio</h2>
+				<motion.h1
+					initial="hidden"
+					animate="visible"
+					variants={titleAnim(delay, -15, -15)}>
+					Empowerment Technologies Quarter 2 Portfolio
+				</motion.h1>
+				<motion.h2
+					initial="hidden"
+					animate="visible"
+					variants={titleAnim(delay + 0.4, 0, 7)}>
+					<u>Andrei DJ P. Berja</u>
+				</motion.h2>
+				<motion.h2
+					initial="hidden"
+					animate="visible"
+					variants={titleAnim(delay + 0.4, 0, 15)}>
+					11-ICT-INDIGO
+				</motion.h2>
 			</div>
 			<div className="p-6">
 				<h1 className="text-center text-accent text-4xl font-medium p-4">
