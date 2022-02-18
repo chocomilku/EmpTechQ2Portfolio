@@ -14,11 +14,11 @@ export interface postItemProp {
 	slug: string;
 	title: string;
 	description: string;
-	img?: string;
-	date?: string;
 	headers: string[];
-	startDate?: string;
-	endDate?: string;
+	startDate: string;
+	endDate: string;
+	previous?: string;
+	next?: string;
 }
 
 export interface iProps {
@@ -72,4 +72,9 @@ export interface liTechProps {
 export interface buttonProps {
 	text: string;
 	link: string;
+}
+
+export interface NavigationType {
+	type: "previous" | "next";
+	link?: string;
 }

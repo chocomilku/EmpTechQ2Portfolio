@@ -12,6 +12,7 @@ import styles from "../../styles/page.module.scss";
 import remarkGFM from "remark-gfm";
 import imageSize from "rehype-img-size";
 import Image from "next/image";
+import { Navigation } from "../../components/Navigation";
 
 const h2Link = ({ id, ...rest }: custom) => {
 	if (id) {
@@ -59,6 +60,14 @@ const page = (props: pageData) => {
 						components={components}
 					/>
 				</article>
+			</div>
+			<div className="p-4 flex flex-row w-full underline justify-evenly content-center">
+				<div>
+					<Navigation link={props.meta.previous} type="previous" />
+				</div>
+				<div>
+					<Navigation link={props.meta.next} type="next" />
+				</div>
 			</div>
 			<div className="grid place-items-center p-2">
 				<Btn text="Go Back to Home" link="/" />
