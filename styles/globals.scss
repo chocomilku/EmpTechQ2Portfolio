@@ -13,7 +13,11 @@ html {
 	color: black;
 	font-family: "Poppins", sans-serif;
 	scroll-behavior: smooth;
-	@apply min-h-screen min-w-full;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+	word-break: break-word;
+	hyphens: auto;
+	@apply min-h-screen;
 }
 
 .cardContainer {

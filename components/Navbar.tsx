@@ -4,29 +4,28 @@ import Link from "next/link";
 import styles from "../styles/Navbar.module.scss";
 
 export const Navbar: NextPage = ({ children }) => {
-	const [open, setOpen] = useState(false);
 	return (
 		<div className="min-h-screen">
-			<div className="flex flex-col md:flex-row flex-1">
-				<MobileNavBar open={open} setOpen={setOpen} />
+			<div className="flex flex-col md:flex-row flex-1 min-h-screen w-full">
+				<div className="sticky top-0 md:hidden">
+					<div className="bg-purple-900 h-16 w-16 absolute z-10 top-0 right-0">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							className="h-16 w-16"
+							viewBox="0 0 20 20"
+							fill="#FFFFFF">
+							<path
+								fillRule="evenodd"
+								d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+								clipRule="evenodd"
+							/>
+						</svg>
+					</div>
+				</div>
 				<main className="flex-1">{children}</main>
 				<LargerNavBar />
 			</div>
 		</div>
-	);
-};
-
-const MobileNavBar = ({ open, setOpen }: { open: boolean; setOpen: any }) => {
-	return (
-		<>
-			{setOpen(true)}
-			<aside
-				className={`hidden text-white bg-purple-900 absolute top-0 right-0 h-screen w-screen transition-transform duration-300 ease-in-out z-10 ${
-					open ? "translate-x-0" : "translate-x-full"
-				}`}>
-				<NavContent />
-			</aside>
-		</>
 	);
 };
 
