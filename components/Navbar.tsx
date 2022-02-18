@@ -5,14 +5,11 @@ import styles from "../styles/Navbar.module.scss";
 
 export const Navbar: NextPage = ({ children }) => {
 	const [help, setHelp] = useState(false);
-	{
-		console.log(help);
-	}
 	return (
 		<div className="min-h-screen">
 			<div className="flex flex-col md:flex-row flex-1 min-h-screen w-full">
 				<div
-					className="fixed z-10 top-0 right-0 w-16 h-16 cursor-pointer bg-purple-900"
+					className="fixed md:hidden z-20 top-0 right-0 w-16 h-16 cursor-pointer bg-purple-900"
 					onClick={() => setHelp(!help)}>
 					<span className="relative">
 						<svg
@@ -28,8 +25,11 @@ export const Navbar: NextPage = ({ children }) => {
 						</svg>
 					</span>
 				</div>
-				<div className="md:hidden absolute w-screen h-screen bg-purple-900 text-white z-10">
-					<NavContent />
+				<div
+					className={`md:hidden fixed w-screen transition-all h-screen bg-purple-900 text-white z-10 ${
+						help ? "translate-x-0" : "-translate-x-[100%]"
+					}`}>
+					<NavContent open={help} setOpen={setHelp} />
 				</div>
 				<main className="flex-1">{children}</main>
 				<LargerNavBar />
@@ -48,18 +48,31 @@ const LargerNavBar: NextPage = () => {
 	);
 };
 
-const NavContent = () => {
+const NavContent = ({ open, setOpen }: { open?: boolean; setOpen?: any }) => {
 	return (
 		<nav className={styles.nav}>
 			<h1>Quarter 2 Portfolio</h1>
 			<ul className={styles.ul}>
 				{paths.map((x, i) => {
 					return (
-						<li key={i} className={styles.li}>
-							<Link href={x.path} scroll={false}>
-								<a>{x.title}</a>
-							</Link>
-						</li>
+						<>
+							{open == undefined ? (
+								<li key={i} className={styles.li}>
+									<Link href={x.path} scroll={false}>
+										<a>{x.title}</a>
+									</Link>
+								</li>
+							) : (
+								<li
+									key={i}
+									className={styles.li}
+									onClick={() => setOpen(!open)}>
+									<Link href={x.path} scroll={false}>
+										<a>{x.title}</a>
+									</Link>
+								</li>
+							)}
+						</>
 					);
 				})}
 			</ul>
