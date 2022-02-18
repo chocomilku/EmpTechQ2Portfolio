@@ -4,13 +4,13 @@ import Link from "next/link";
 
 export const LiTech = ({ tech, description, url }: liTechProps) => {
 	return (
-		<Link href={url} passHref>
+		<Link href={url} passHref scroll={false}>
 			<article
 				className={styles.item}
 				// onClick={() => (window.location.href = url)}
 			>
 				<h1>
-					<Link href={url}>
+					<Link href={url} scroll={false}>
 						<a className="underline">{tech}</a>
 					</Link>
 				</h1>

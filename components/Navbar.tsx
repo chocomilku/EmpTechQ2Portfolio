@@ -48,7 +48,7 @@ const NavContent = () => {
 				{paths.map((x, i) => {
 					return (
 						<li key={i} className={styles.li}>
-							<Link href={x.path}>
+							<Link href={x.path} scroll={false}>
 								<a>{x.title}</a>
 							</Link>
 						</li>

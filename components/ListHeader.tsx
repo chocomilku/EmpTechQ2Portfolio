@@ -7,7 +7,7 @@ export const ListHeader = ({ item, page }: headerList) => {
 	const id = slugger.slug(item);
 	return (
 		<li className={styles.list}>
-			<Link href={`/activities/${page}#${id}`}>
+			<Link href={`/activities/${page}#${id}`} scroll={false}>
 				<a>{item}</a>
 			</Link>
 		</li>

@@ -17,7 +17,7 @@ import { Navigation } from "../../components/Navigation";
 const h2Link = ({ id, ...rest }: custom) => {
 	if (id) {
 		return (
-			<Link href={`#${id}`}>
+			<Link href={`#${id}`} scroll={false}>
 				<a id={id}>
 					<h2 {...rest} />
 				</a>

@@ -6,7 +6,7 @@ import styles from "../styles/PostCard.module.scss";
 
 export const PostCard = ({ metadata }: propRec) => {
 	return (
-		<Link href={`/activities/${metadata.slug}`} passHref>
+		<Link href={`/activities/${metadata.slug}`} passHref scroll={false}>
 			<div className={styles.item}>
 				<h1>{metadata.title}</h1>
 				<h6 className={styles.date}>

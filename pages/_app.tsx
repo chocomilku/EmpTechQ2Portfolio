@@ -2,7 +2,7 @@ import { ThemeProvider } from "next-themes";
 import "../styles/globals.scss";
 import type { AppProps } from "next/app";
 import { Navbar } from "../components/Navbar";
-import { motion, AnimatePresence, Variants } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 
 const variants: Variants = {
 	hidden: {
@@ -12,9 +12,6 @@ const variants: Variants = {
 	visible: {
 		translateY: 0,
 		opacity: 1,
-		transition: {
-			delay: 0.25,
-		},
 	},
 };
 
@@ -25,8 +22,8 @@ function MyApp({ Component, pageProps, router }: AppProps) {
 				<Navbar>
 					<motion.main
 						key={router.route}
-						variants={variants}
 						initial="hidden"
+						variants={variants}
 						animate="visible">
 						<Component {...pageProps} />
 					</motion.main>

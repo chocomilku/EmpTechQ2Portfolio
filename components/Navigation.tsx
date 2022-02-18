@@ -16,7 +16,7 @@ export const Navigation = ({ type, link }: NavigationType) => {
 				""
 			) : (
 				<div>
-					<Link href={`/activities/${link}`}>
+					<Link href={`/activities/${link}`} scroll={false}>
 						<a>
 							{capital(type)}: {linkCap(link)}
 						</a>
