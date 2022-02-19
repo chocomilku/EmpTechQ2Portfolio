@@ -76,8 +76,8 @@ const Home: NextPage = () => {
 				</div>
 				<h1 className="text-2xl text-accent dark:text-purple-500 text-center p-2 font-medium">
 					Built by{" "}
-					<Link href="/">
-						<a className="underline">chocomilku-</a>
+					<Link href="https://github.com/chocomilku">
+						<a className="underline">chocomilku- / Andrei Berja</a>
 					</Link>
 				</h1>
 				<div className="grid place-items-center p-2">
