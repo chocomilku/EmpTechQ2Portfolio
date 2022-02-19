@@ -1,11 +1,11 @@
 .date {
-	@apply text-accent text-xs;
+	@apply text-xs;
 }
 
 .item {
-	@apply max-w-xs w-full min-h-[260px] rounded-xl bg-slate-100 shadow-accent shadow p-4 transition-transform hover:scale-105 cursor-pointer;
+	@apply max-w-xs w-full min-h-[260px] rounded-xl shadow-accent dark:shadow-purple-700 shadow p-4 transition-transform hover:scale-105 cursor-pointer;
 	h1 {
-		@apply text-2xl font-medium text-accent underline;
+		@apply text-2xl font-medium underline;
 	}
 	p {
 		@apply text-lg;

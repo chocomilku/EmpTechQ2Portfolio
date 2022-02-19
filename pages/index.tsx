@@ -53,10 +53,10 @@ const Home: NextPage = () => {
 				</motion.h2>
 			</div>
 			<div className="p-6">
-				<h1 className="text-center text-accent text-4xl font-medium p-4">
+				<h1 className="text-center text-accent dark:text-purple-800 text-4xl font-medium p-4">
 					An Over-engineered portfolio using Next.js with Typescript 🤯
 				</h1>
-				<h1 className="text-3xl text-accent text-center p-2;">
+				<h1 className="text-3xl text-accent dark:text-purple-800 text-center p-2;">
 					Main Technologies Used
 				</h1>
 				<div className="flex content-center justify-center">
@@ -73,7 +73,7 @@ const Home: NextPage = () => {
 						})}
 					</div>
 				</div>
-				<h1 className="text-2xl text-accent text-center p-2 font-medium">
+				<h1 className="text-2xl text-accent dark:text-purple-500 text-center p-2 font-medium">
 					Built by{" "}
 					<Link href="/">
 						<a className="underline">chocomilku-</a>

@@ -6,10 +6,10 @@ export const LiTech = ({ tech, description, url }: liTechProps) => {
 	return (
 		<Link href={url} passHref scroll={false}>
 			<article
-				className={styles.item}
+				className={`${styles.item} dark:bg-zinc-900 bg-slate-100`}
 				// onClick={() => (window.location.href = url)}
 			>
-				<h1>
+				<h1 className="text-accent dark:text-purple-500">
 					<Link href={url} scroll={false}>
 						<a className="underline">{tech}</a>
 					</Link>

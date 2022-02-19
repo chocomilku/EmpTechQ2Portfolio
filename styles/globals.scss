@@ -2,24 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-// :root {
-// 	--BG: url("../public/Visiwig-Dots.svg");
-// 	--BGColor: white;
-// }
-
-// [data-theme="dark"] {
-// 	--BG: url("../public/Visiwig-Dots-dark.svg");
-// 	--BGColor: #161615;
-// }
-
 html {
-	// background-image: var(--BG);
-	// // visiwig.com/patterns
-	// // scale: 0.8 stroke: 19.31
-	// background-repeat: repeat;
-	// background-position: center;
-	// background-size: cover;
-	// background-color: var(--BGColor);
 	font-family: "Poppins", sans-serif;
 	scroll-behavior: smooth;
 	word-wrap: break-word;
@@ -29,7 +12,7 @@ html {
 	@apply min-h-screen;
 }
 body {
-	@apply bg-bgLight dark:bg-bgDark bg-repeat bg-cover bg-center text-black dark:text-white;
+	@apply bg-bgLight dark:bg-bgDark bg-repeat bg-cover bg-center text-black dark:text-white transition-all;
 }
 
 .cardContainer {

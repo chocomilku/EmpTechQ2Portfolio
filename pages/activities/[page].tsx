@@ -28,7 +28,12 @@ const h2Link = ({ id, ...rest }: custom) => {
 };
 
 const emAns = ({ ...rest }: any) => {
-	return <span className="text-accent no-underline not-italic" {...rest} />;
+	return (
+		<span
+			className="text-accent dark:text-purple-400 no-underline not-italic"
+			{...rest}
+		/>
+	);
 };
 
 const nextImg = (props: any) => {
@@ -54,7 +59,7 @@ const page = (props: pageData) => {
 				</div>
 			</div>
 			<div className="w-full grid place-items-center">
-				<article className="prose bg-slate-50 rounded w-fit p-4 container m-4">
+				<article className="prose dark:prose-invert bg-slate-50 dark:bg-zinc-900 rounded w-fit p-4 container m-4">
 					<MDXRemote
 						compiledSource={props.mdx.compiledSource}
 						components={components}
