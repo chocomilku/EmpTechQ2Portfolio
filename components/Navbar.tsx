@@ -2,6 +2,7 @@ import { NextPage } from "next";
 import { useState } from "react";
 import Link from "next/link";
 import styles from "../styles/Navbar.module.scss";
+import { useTheme } from "next-themes";
 
 export const Navbar: NextPage = ({ children }) => {
 	const [help, setHelp] = useState(false);
@@ -49,6 +50,7 @@ const LargerNavBar: NextPage = () => {
 };
 
 const NavContent = ({ open, setOpen }: { open?: boolean; setOpen?: any }) => {
+	const { theme, setTheme } = useTheme();
 	return (
 		<nav className={styles.nav}>
 			<h1>Quarter 2 Portfolio</h1>
@@ -79,6 +81,14 @@ const NavContent = ({ open, setOpen }: { open?: boolean; setOpen?: any }) => {
 					);
 				})}
 			</ul>
+			<div className="flex w-full justify-center content-center p-4">
+				<button
+					className="p-4 rounded h-auto w-3/4 text-center bg-purple-700 hover:bg-purple-600 transition-colors"
+					onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+					type="button">
+					{theme === "dark" ? "Light Mode" : "Dark Mode"}
+				</button>
+			</div>
 		</nav>
 	);
 };

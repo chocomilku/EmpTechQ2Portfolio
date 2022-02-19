@@ -9,6 +9,10 @@ module.exports = {
 			colors: {
 				accent: "#8726bf",
 			},
+			backgroundImage: {
+				bgLight: `url("../public/Visiwig-Dots.svg")`,
+				bgDark: `url("../public/Visiwig-Dots-dark.svg")`,
+			},
 		},
 	},
 	plugins: [require("@tailwindcss/typography")],
