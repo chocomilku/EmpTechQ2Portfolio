@@ -3,6 +3,7 @@ import "../styles/globals.scss";
 import type { AppProps } from "next/app";
 import { Navbar } from "../components/Navbar";
 import { motion, Variants } from "framer-motion";
+import { ToTop } from "../components/ToTop";
 
 const variants: Variants = {
 	hidden: {
@@ -27,6 +28,7 @@ function MyApp({ Component, pageProps, router }: AppProps) {
 						animate="visible">
 						<Component {...pageProps} />
 					</motion.main>
+					<ToTop />
 				</Navbar>
 			</ThemeProvider>
 		</>

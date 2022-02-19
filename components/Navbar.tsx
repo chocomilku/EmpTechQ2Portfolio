@@ -90,7 +90,7 @@ const NavContent = ({ open, setOpen }: { open?: boolean; setOpen?: any }) => {
 					className="p-4 rounded h-auto w-3/4 text-center bg-purple-700 hover:bg-purple-600 transition-colors max-w-xs"
 					onClick={() => {
 						setTheme(theme === "dark" ? "light" : "dark");
-						setOpen(!open);
+						open == undefined ? "" : setOpen(!open);
 					}}
 					type="button">
 					{theme === "dark" ? "Light Mode" : "Dark Mode"}
