@@ -1,5 +1,5 @@
 .item {
-	@apply max-w-xs w-full min-h-[260px] rounded-xl shadow p-4 transition-transform hover:scale-105 cursor-pointer shadow-accent dark:shadow-purple-700;
+	@apply max-w-xs w-full min-h-[260px] rounded-xl p-4 transition-transform hover:scale-105 cursor-pointer;
 	h1 {
 		@apply text-2xl font-medium underline;
 	}

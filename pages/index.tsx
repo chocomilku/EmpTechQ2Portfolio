@@ -33,31 +33,35 @@ const Home: NextPage = () => {
 			<Head>
 				<title>{webMeta.data.title}</title>
 			</Head>
-			<div className={styles.hero}>
+			<div
+				className={`${styles.hero} bg-center bg-cover bg-no-repeat bg-heroLight dark:bg-heroDark`}>
 				<motion.h1
 					initial="hidden"
 					animate="visible"
-					variants={titleAnim(delay, -15, -15)}>
+					variants={titleAnim(delay, -15, -15)}
+					className="text-white dark:text-slate-100">
 					Empowerment Technologies Quarter 2 Portfolio
 				</motion.h1>
 				<motion.h2
 					initial="hidden"
 					animate="visible"
-					variants={titleAnim(delay + 0.4, 0, 7)}>
+					variants={titleAnim(delay + 0.4, 0, 7)}
+					className="text-white dark:text-slate-100">
 					<u>Andrei DJ P. Berja</u>
 				</motion.h2>
 				<motion.h2
 					initial="hidden"
 					animate="visible"
-					variants={titleAnim(delay + 0.4, 0, 15)}>
+					variants={titleAnim(delay + 0.4, 0, 15)}
+					className="text-white dark:text-slate-100">
 					11-ICT-INDIGO
 				</motion.h2>
 			</div>
 			<div className="p-6">
-				<h1 className="text-center text-accent dark:text-purple-800 text-4xl font-medium p-4">
+				<h1 className="text-center text-accent dark:text-slate-100 text-4xl font-medium p-4">
 					An Over-engineered portfolio using Next.js with Typescript 🤯
 				</h1>
-				<h1 className="text-3xl text-accent dark:text-purple-800 text-center p-2;">
+				<h1 className="text-3xl text-accent dark:text-slate-200 text-center p-2;">
 					Main Technologies Used
 				</h1>
 				<div className="flex content-center justify-center">
@@ -74,7 +78,7 @@ const Home: NextPage = () => {
 						})}
 					</div>
 				</div>
-				<h1 className="text-2xl text-accent dark:text-purple-500 text-center p-2 font-medium">
+				<h1 className="text-2xl text-accent dark:text-slate-200 text-center p-2 font-medium">
 					Built by{" "}
 					<Link href="https://github.com/chocomilku">
 						<a className="underline">chocomilku- / Andrei Berja</a>

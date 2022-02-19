@@ -13,8 +13,10 @@ const actHome = (props: inProps) => {
 			<Head>
 				<title>Activities | {webMeta.data.title}</title>
 			</Head>
-			<div className={styles.hero}>
-				<h1>Activities</h1>
+			<div className={`${styles.hero} `}>
+				<h1 className="bg-center bg-cover bg-no-repeat bg-heroLight dark:bg-heroDark text-white dark:text-slate-100">
+					Activities
+				</h1>
 			</div>
 
 			<div className="flex content-center justify-center">

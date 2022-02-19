@@ -1,17 +1,13 @@
 .hero {
 	@apply w-full h-auto grid place-items-center p-4;
 	> div {
-		background-image: url("../public/stacked-waves-haikei.svg");
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-position: center;
 		@apply max-w-xs min-w-fit p-6 h-fit;
 		h1,
 		h2 {
-			@apply text-white text-4xl text-center;
+			@apply text-4xl text-inherit text-center;
 		}
 		h2 {
-			@apply text-2xl;
+			@apply text-2xl text-inherit;
 		}
 	}
 }

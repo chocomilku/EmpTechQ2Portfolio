@@ -56,7 +56,7 @@ const page = (props: pageData) => {
 				</title>
 			</Head>
 			<div className={styles.hero}>
-				<div>
+				<div className="bg-center bg-cover bg-no-repeat bg-heroLight dark:bg-heroDark text-white dark:text-slate-100">
 					<h1>{props.meta.title}</h1>
 					<h2>{props.meta.description}</h2>
 				</div>
@@ -70,12 +70,20 @@ const page = (props: pageData) => {
 				</article>
 			</div>
 			<div className="p-4 flex flex-row w-full underline justify-evenly content-center text-lg">
-				<div>
-					<Navigation link={props.meta.previous} type="previous" />
-				</div>
-				<div>
-					<Navigation link={props.meta.next} type="next" />
-				</div>
+				{props.meta.previous ? (
+					<div>
+						<Navigation link={props.meta.previous} type="previous" />
+					</div>
+				) : (
+					<></>
+				)}
+				{props.meta.next ? (
+					<div>
+						<Navigation link={props.meta.next} type="next" />
+					</div>
+				) : (
+					<></>
+				)}
 			</div>
 			<div className="grid place-items-center p-2">
 				<Btn text="Go Back to Activities" link="/activities" />

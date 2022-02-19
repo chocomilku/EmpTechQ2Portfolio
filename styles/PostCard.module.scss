@@ -3,7 +3,7 @@
 }
 
 .item {
-	@apply max-w-xs w-full min-h-[260px] rounded-xl shadow-accent dark:shadow-purple-700 shadow p-4 transition-transform hover:scale-105 cursor-pointer;
+	@apply max-w-xs w-full min-h-[260px] rounded-xl p-4 transition-transform hover:scale-105 cursor-pointer;
 	h1 {
 		@apply text-2xl font-medium underline;
 	}
