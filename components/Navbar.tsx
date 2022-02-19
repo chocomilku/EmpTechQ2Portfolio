@@ -53,7 +53,7 @@ const NavContent = ({ open, setOpen }: { open?: boolean; setOpen?: any }) => {
 	const { theme, setTheme } = useTheme();
 	return (
 		<nav className={styles.nav}>
-			<h1>Quarter 2 Portfolio</h1>
+			<h1>EmpTech Quarter 2 Portfolio</h1>
 			<ul className={styles.ul} key={Math.random() * 10}>
 				{paths.map((x, i) => {
 					return (
@@ -81,9 +81,13 @@ const NavContent = ({ open, setOpen }: { open?: boolean; setOpen?: any }) => {
 					);
 				})}
 			</ul>
-			<div className="flex w-full justify-center content-center p-4">
+			<div className="flex flex-col justify-center content-center text-center text-xl py-4 px-1">
+				<h2>Andrei DJ P. Berja</h2>
+				<h2>11-ICT-INDIGO</h2>
+			</div>
+			<div className="flex w-full justify-center content-center py-2 px-4">
 				<button
-					className="p-4 rounded h-auto w-3/4 text-center bg-purple-700 hover:bg-purple-600 transition-colors"
+					className="p-4 rounded h-auto w-3/4 text-center bg-purple-700 hover:bg-purple-600 transition-colors max-w-xs"
 					onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
 					type="button">
 					{theme === "dark" ? "Light Mode" : "Dark Mode"}

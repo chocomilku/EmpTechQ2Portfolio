@@ -6,6 +6,7 @@ import data from "../utils/technologies.json";
 import { Btn } from "../components/Btn";
 import Link from "next/link";
 import { motion, Variants } from "framer-motion";
+import webMeta from "../utils/constants.json";
 
 const titleAnim = (delay: number, startX: number, startY: number): Variants => {
 	return {
@@ -30,7 +31,7 @@ const Home: NextPage = () => {
 	return (
 		<>
 			<Head>
-				<title>Website Name</title>
+				<title>{webMeta.data.title}</title>
 			</Head>
 			<div className={styles.hero}>
 				<motion.h1

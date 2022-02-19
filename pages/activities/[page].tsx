@@ -13,6 +13,7 @@ import remarkGFM from "remark-gfm";
 import imageSize from "rehype-img-size";
 import Image from "next/image";
 import { Navigation } from "../../components/Navigation";
+import webMeta from "../../utils/constants.json";
 
 const h2Link = ({ id, ...rest }: custom) => {
 	if (id) {
@@ -50,7 +51,9 @@ const page = (props: pageData) => {
 	return (
 		<>
 			<Head>
-				<title>{props.meta.title} | Website Name</title>
+				<title>
+					{props.meta.title} | {webMeta.data.title}
+				</title>
 			</Head>
 			<div className={styles.hero}>
 				<div>
@@ -66,7 +69,7 @@ const page = (props: pageData) => {
 					/>
 				</article>
 			</div>
-			<div className="p-4 flex flex-row w-full underline justify-evenly content-center">
+			<div className="p-4 flex flex-row w-full underline justify-evenly content-center text-lg">
 				<div>
 					<Navigation link={props.meta.previous} type="previous" />
 				</div>
@@ -75,7 +78,7 @@ const page = (props: pageData) => {
 				</div>
 			</div>
 			<div className="grid place-items-center p-2">
-				<Btn text="Go Back to Home" link="/" />
+				<Btn text="Go Back to Activities" link="/activities" />
 			</div>
 		</>
 	);

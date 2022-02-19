@@ -5,12 +5,13 @@ import matter from "gray-matter";
 import { PostCard } from "../../components/PostCard";
 import styles from "../../styles/actHome.module.scss";
 import { Btn } from "../../components/Btn";
+import webMeta from "../../utils/constants.json";
 
 const actHome = (props: inProps) => {
 	return (
 		<>
 			<Head>
-				<title>Activities | Website Name</title>
+				<title>Activities | {webMeta.data.title}</title>
 			</Head>
 			<div className={styles.hero}>
 				<h1>Activities</h1>
